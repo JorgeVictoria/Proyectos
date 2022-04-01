@@ -1,0 +1,33 @@
+.list-cell {-fx-font:12pt "Comic Sans MS Bold Italic" }
+
+
+.AnchorPane {-fx-background-color: black;
+	         -fx-border-color: white;
+	         -fx-border-width : 10px;}
+
+.Label.header {-fx-font-size: 24pt;
+    			-fx-font-family: "Comic Sans MS";
+    			-fx-font-style: italic ;
+    			-fx-font-weight: bold;
+   				 -fx-text-fill: white;}
+   				 
+.Label 			{-fx-font-size: 18pt;
+    			-fx-font-family: "Comic Sans MS";
+    			-fx-font-style: italic ;
+    			-fx-font-weight: bold;
+   				 -fx-text-fill: white;}
+   				 
+.Button			{-fx-background-color: white;
+	 			-fx-text-fill: black;
+	 			-fx-font-size: 14pt;
+	 			-fx-font-family: "Comic Sans MS";
+    			-fx-font-style: italic ;
+    			-fx-font-weight: bold;}
+	 			
+.TextField		{-fx-font-size: 14pt;
+    			-fx-font-family: "Comic Sans MS";
+    			-fx-font-style: italic ;
+    			-fx-font-weight: bold;
+   				 -fx-text-fill: black;}
+   				 
+ .MenuBar		{-fx-background-color: white;}

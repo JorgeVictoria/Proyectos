@@ -1,0 +1,42 @@
+17
+23
+0 Coruña
+1 Vigo
+2 Valladolid
+3 Oviedo
+4 Bilbao
+5 Madrid
+6 Zaragoza
+7 Gerona
+8 Barcelona
+9 Valencia
+10 Murcia
+11 Albacete
+12 Jaén
+13 Badajoz
+14 Sevilla
+15 Granada
+16 Cádiz
+0 1 171
+0 2 455
+1 2 356
+2 5 193
+3 4 304
+4 2 280
+4 5 395
+4 6 324
+5 11 251
+5 12 355
+5 13 403
+6 5 325
+6 8 296
+7 8 100
+8 9 349
+9 10 241
+9 11 191
+10 11 150
+10 15 278
+12 14 242
+12 15 99
+14 15 256
+14 16 125

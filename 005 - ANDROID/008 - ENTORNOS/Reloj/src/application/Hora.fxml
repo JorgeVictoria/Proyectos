@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HoraController">
+   <children>
+      <Label layoutX="93.0" layoutY="52.0" text="HORA">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbHora" layoutX="93.0" layoutY="118.0" prefHeight="28.0" prefWidth="41.0" text="12">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="ivIncremento" fitHeight="43.0" fitWidth="65.0" layoutX="145.0" layoutY="92.0" onMouseClicked="#incrementar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Proyectos/008%20-%20ENTORNOS/Reloj/src/images/arriba.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivDecremento" fitHeight="43.0" fitWidth="43.0" layoutX="145.0" layoutY="135.0" onMouseClicked="#decrementar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Proyectos/008%20-%20ENTORNOS/Reloj/src/images/abajo.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cbZonaHoraria" layoutX="50.0" layoutY="205.0" onAction="#cambiarHora" prefWidth="150.0" />
+      <Button fx:id="btnVolver" layoutX="99.0" layoutY="264.0" mnemonicParsing="false" onAction="#volver" prefHeight="35.0" prefWidth="65.0" text="Volver">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

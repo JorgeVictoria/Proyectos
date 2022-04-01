@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">P2_master_detail_books</string>
+    <string name="title_item_detail">Item Detail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="push_button_to_load_books">Push button to load books</string>
+</resources>

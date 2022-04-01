@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 27 dic 2021 11:38:31 by Hibernate Tools 5.5.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="hogwarts" dynamic-insert="false" dynamic-update="false" mutable="true" name="hogwarts.House" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="house">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="hogwarts.Person" embed-xml="true" fetch="select" insert="true" name="person" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="head_teacher" not-null="true" unique="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="name" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="persons" optimistic-lock="true" sort="unsorted" table="person">
+            <key on-delete="noaction">
+                <column name="house_id"/>
+            </key>
+            <one-to-many class="hogwarts.Person" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

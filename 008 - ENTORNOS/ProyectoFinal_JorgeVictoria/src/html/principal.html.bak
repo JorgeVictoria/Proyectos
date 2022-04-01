@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset=utf-8 /> 
+	<title>Ayuda </title> 
+</head> 
+<body> 
+	 
+	<h1>Pantalla principal<h1>
+	<p>Desde aquí podemos acceder a las diversas opciones que nos ofrece el programa para realizar las operaciones necesarias de compra e impresión de entradas, así como impresión de lista e informes.
+	Se puede utilizar los botones del área principal o el menú. Hay opción para cambiar algunos colores de la aplicación.</p>
+	
+	<h1>Pantalla Taquilla</h1>
+	
+	<p>Pantalla para seleccionar diferentes opciones para la compra de entrada, como la sala, la película, el horario…así como aplicar algún tipo de descuento. Se controla la venta de asientos duplicados.</p>
+	
+	<h1>Pantalla Ticket</h1>
+	
+	<p>Boceto inicial de una entrada a imprimir. Podemos observar toda la información sobre la sesión, película…</p>
+	
+	<h1>Pantalla Listado</h1>
+	
+	<p>Desde aquí podemos ver el listado total de las entradas que hemos vendido, con la información de cada una de ellas.</p>
+	
+	<p>Enlace al <a href="Manualillo Aplcacion.pdf" target="_blank"></a></p>
+	
+	
+
+</body> 
+</html> 
+
+
+
+

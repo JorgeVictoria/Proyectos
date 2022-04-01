@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ContadorGlobal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="144dp"
+        android:text="@string/valor_inicial"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ReseteoGlobal"
+        app:layout_constraintEnd_toStartOf="@+id/ReseteoGlobal"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ReseteoGlobal" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="224dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="349dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="479dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="600dp" />
+
+    <Button
+        android:id="@+id/ReseteoGlobal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/calabaza"
+        android:text="@string/reset_all"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.114"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/IncrementarFila2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@color/verde"
+        android:text="@string/incremento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/resetFila2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/DecrementarFila2"
+        app:layout_constraintTop_toTopOf="@+id/resetFila2"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/DecrementarFila2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/rojo"
+        android:text="@string/decremento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/IncrementarFila2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/contadorFila2"
+        app:layout_constraintTop_toTopOf="@+id/IncrementarFila2"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/resetFila2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/calabaza"
+        android:text="@string/reset"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/resetFila3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/IncrementarFila2"
+        app:layout_constraintTop_toBottomOf="@+id/ReseteoGlobal"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/contadorFila2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_inicial"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/DecrementarFila2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/DecrementarFila2" />
+
+    <TextView
+        android:id="@+id/contadorFila3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_inicial"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/DecrementarFila3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/DecrementarFila3" />
+
+    <TextView
+        android:id="@+id/contadorFila4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_inicial"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/DecrementarFila4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/DecrementarFila4" />
+
+    <TextView
+        android:id="@+id/contadorFila5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_inicial"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/DecrementarFila5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/DecrementarFila5" />
+
+    <Button
+        android:id="@+id/IncrementarFila3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/verde"
+        android:text="@string/incremento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/resetFila3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/DecrementarFila3"
+        app:layout_constraintTop_toTopOf="@+id/resetFila3"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/DecrementarFila3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/rojo"
+        android:text="@string/decremento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/IncrementarFila3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/contadorFila3"
+        app:layout_constraintTop_toTopOf="@+id/IncrementarFila3" />
+
+    <Button
+        android:id="@+id/resetFila3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/calabaza"
+        android:text="@string/reset"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/resetFila4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/IncrementarFila3"
+        app:layout_constraintTop_toBottomOf="@+id/resetFila2"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/IncrementarFila4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/verde"
+        android:text="@string/incremento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/resetFila4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/DecrementarFila4"
+        app:layout_constraintTop_toTopOf="@+id/resetFila4"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/DecrementarFila4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/rojo"
+        android:text="@string/decremento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/IncrementarFila4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/contadorFila4"
+        app:layout_constraintTop_toTopOf="@+id/IncrementarFila4" />
+
+    <Button
+        android:id="@+id/resetFila4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/calabaza"
+        android:text="@string/reset"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/resetFila5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/IncrementarFila4"
+        app:layout_constraintTop_toBottomOf="@+id/resetFila3"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/IncrementarFila5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/verde"
+        android:text="@string/incremento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/resetFila5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/DecrementarFila5"
+        app:layout_constraintTop_toTopOf="@+id/resetFila5"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/DecrementarFila5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/rojo"
+        android:text="@string/decremento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/IncrementarFila5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/contadorFila5"
+        app:layout_constraintTop_toTopOf="@+id/IncrementarFila5" />
+
+    <Button
+        android:id="@+id/resetFila5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/calabaza"
+        android:text="@string/reset"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/IncrementarFila5"
+        app:layout_constraintTop_toBottomOf="@+id/resetFila4"
+        tools:ignore="TextContrastCheck" />
+
+</android.support.constraint.ConstraintLayout>

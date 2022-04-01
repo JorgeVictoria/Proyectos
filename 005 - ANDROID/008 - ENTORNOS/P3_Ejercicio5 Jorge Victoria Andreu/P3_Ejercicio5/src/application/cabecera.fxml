@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+   <children>
+      <Label layoutX="14.0" layoutY="18.0" text="FAST BURGUERS">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="60.0" fitWidth="367.0" layoutX="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@D:\One drive\OneDrive\Estudios\Workspace\Visual Studio\Visual-Studio\001 - JAVA\P3_Ejercicio5\src\images" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

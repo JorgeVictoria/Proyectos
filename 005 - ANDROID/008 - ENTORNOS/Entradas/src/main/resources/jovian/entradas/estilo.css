@@ -1,0 +1,35 @@
+
+.AnchorPane { -fx-background-color: white;
+			  -fx-border-color: orange;
+	          -fx-border-width : 10px; }
+
+
+.Banner  { -fx-alignment:center;
+		   -fx-font-family: "Comic Sans MS";
+		   -fx-font-size: 40px;
+		   -fx-text-fill: orange; }
+		   
+.btnImprimir, .btnComprar  { -fx-alignment:center-left ;
+						     -fx-font-family: "Comic Sans MS";
+						     -fx-font-size: 26px;
+		   				     -fx-text-fill: white;
+		   				      -fx-background-color: orange;}
+		   				      
+.labelEntrada { -fx-font-family: "Comic Sans MS";
+		        -fx-font-size: 16px;
+		        -fx-text-fill: orange; }
+		   				   
+
+		   				   
+
+.ComboBox { -fx-alignment:center-left ;
+			-fx-font-family: "Comic Sans MS";
+			-fx-font-size: 16px;
+		   	-fx-text-fill: white;
+		    -fx-background-color: orange;}
+		    
+.entrada { -fx-alignment:center ;
+			-fx-font-family: "Comic Sans MS";
+			-fx-font-size: 28px;
+		   	-fx-text-fill: orange;
+		   	-fx-font-weight: bold;}

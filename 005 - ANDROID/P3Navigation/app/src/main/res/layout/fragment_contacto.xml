@@ -1,0 +1,90 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SomosFragment">
+
+        <ImageView
+            android:id="@+id/ivLogo2"
+            android:layout_width="wrap_content"
+            android:layout_height="247dp"
+            android:src="@drawable/computer"
+            android:layout_gravity="center"/>
+
+
+        <ImageView
+            android:id="@+id/ivMail"
+            android:layout_width="116dp"
+            android:layout_height="107dp"
+            android:layout_gravity="center"
+            android:src="@drawable/correo" />
+
+        <TextView
+            android:id="@+id/tvmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="jvandreu@hotmail.com"
+            android:textSize="16sp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/ivLinkedin"
+            android:layout_width="116dp"
+            android:layout_height="107dp"
+            android:src="@drawable/linkedinlogo"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/linkedinurl"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            android:clickable="true"
+            android:linksClickable="true"/>
+
+        <ImageView
+            android:id="@+id/ivGitHub"
+            android:layout_width="116dp"
+            android:layout_height="107dp"
+            android:src="@drawable/githublogo"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvgitHub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="Coming up next..."
+            android:textSize="16sp"
+            android:layout_gravity="center" />
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

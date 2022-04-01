@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Proyectos\007 - JAVA TEORIA\.metadata\.plugins\org.eclipse.jdt.core
+2701188036.index
+3823227546.index
+2691175090.index
+1865797976.index
+1202911031.index
+3917703677.index

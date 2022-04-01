@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="category1"
+        android:title="Colors">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/color"
+            android:entryValues="@array/cod_color"
+            android:key="background_color"
+            android:title="Background color" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/color"
+            android:entryValues="@array/cod_color"
+            android:key="font_color"
+            android:title="Font color" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="Category2"
+        android:title="Titles">
+
+        <EditTextPreference
+            android:defaultValue="My App"
+            android:key="title_preference"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="My App" />
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

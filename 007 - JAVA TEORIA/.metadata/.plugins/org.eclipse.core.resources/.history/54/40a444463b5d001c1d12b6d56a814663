@@ -1,0 +1,99 @@
+/**
+ * 
+ */
+package tiposDatos;
+
+/**
+ * ejemplo de uso de operadores numericos
+ * @author jvand
+ * @version 1.0
+ * @since 13dic2021
+ *
+ */
+public class OperadoresNumericos {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		//variables locales
+		int x = 5;
+		int y = 10;
+		int z;
+		
+		//operaciones de incremento y decremento de un valor
+		System.out.println("Incremento y decremento de un valor");
+		System.out.println(x);
+		x++;	//incremento en uno
+		System.out.println(x);
+		x--;	//decremento en uno
+		System.out.println(x);
+		System.out.println();
+		
+		//incremento y decremento en operaciones
+		//primero se incrementa una variable y luego se realiza la operacion
+		System.out.println("Incremento y luego operacion");
+		z = ++x*y;
+		System.out.println(z);
+		
+		//devolvemos a x su valor inicial
+		x--;
+		
+		System.out.println();
+		//realizamos la operacion y luego incrementamos el valor de x
+		System.out.println("operacion y luego incremento");
+		z = x++*y;
+		System.out.println(z);
+		System.out.println(x);
+		x--;
+		
+		//cambio de signo
+		System.out.println();
+		System.out.println("Cambio de signo");
+		x = -x;
+		System.out.println(x);
+		x = -x;
+		System.out.println(x);
+		
+		//operaciones aritmeticas
+		System.out.println();
+		System.out.println("operaciones aritmeticas.");
+		
+		System.out.println("Suma: " + x + " + " + y + " = " + (x+y) );
+		System.out.println("Resta: " + x + " - " + y + " = " + (x-y) );
+		System.out.println("Producto: " + x + " x " + y + " = " + (x*y) );
+		System.out.println("Division Entera: " + y + " / " + x + " = " + (y/x) );
+		System.out.println("Division Decimal: " + x + " / " + y + " = " + ((double)x/y) );
+		System.out.println("Resto Division:  13  % " + y + " = " + (13%y) );
+		
+		//desplazamiento de bits
+		System.out.println();
+		System.out.println("desplazamiento de bits");
+		int num = 13;
+		System.out.println(Integer.toBinaryString(num));
+		//desplazamos un bit a la derecha. Se elimina el ultimo bit
+		System.out.println(Integer.toBinaryString(num>>1));
+		//desplazamos un bit a la izquierda. Se añade un bit 0 a la derecha
+		System.out.println(Integer.toBinaryString(num<<1));
+		
+		//operadores a nivel de bits
+		System.out.println();
+		System.out.println("Representacion binaria de los numeros");
+		System.out.println("x: " + Integer.toBinaryString(x));
+		System.out.println("y: " + Integer.toBinaryString(y));
+		System.out.println("Operador & AND");
+		System.out.println("x&y: " + (Integer.toBinaryString(x&y)));
+		System.out.println("operador ^ OR exclusivo");
+		System.out.println("x^y: " + (Integer.toBinaryString(x^y)));
+		System.out.println("operador | OR inclusivo");
+		System.out.println("x|y: " + (Integer.toBinaryString(x|y)));
+		System.out.println("cambio de 0 por 1 y viceversa");
+		System.out.println("~y: " + (Integer.toBinaryString(~y)));
+		
+		
+		
+
+	}
+
+}

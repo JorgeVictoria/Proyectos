@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Activities</string>
+    <string name="tvMain">Main Activity</string>
+    <string name="btnGo">Go</string>
+    <string name="tvTop">SecondActivity</string>
+    <string name="etName">Name</string>
+    <string name="btnBack">Back</string>
+    <string name="etSurname">Surname</string>
+</resources>

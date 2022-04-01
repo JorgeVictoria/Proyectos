@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ficheros</string>
+    <string name="my_shared_file">com.jovian.ficheros.mySharedFile</string>
+    <string name="key_preference">com.jovian.ficheros.keyPreference</string>
+</resources>

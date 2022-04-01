@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2 dic 2021 12:57:15 by Hibernate Tools 5.5.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="hogwarts" dynamic-insert="false" dynamic-update="false" mutable="true" name="hogwarts_package.Person" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="person">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="hogwarts_package.House" embed-xml="true" fetch="select" insert="true" name="house" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="house_id"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="firstName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="first_name" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="lastName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="last_name" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="houses" optimistic-lock="true" sort="unsorted" table="house">
+            <key on-delete="noaction">
+                <column name="head_teacher" not-null="true" unique="true"/>
+            </key>
+            <one-to-many class="hogwarts_package.House" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="courses" optimistic-lock="true" sort="unsorted" table="course">
+            <key on-delete="noaction">
+                <column name="teacher_id" unique="true"/>
+            </key>
+            <one-to-many class="hogwarts_package.Course" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="housePointsesForGiver" optimistic-lock="true" sort="unsorted" table="house_points">
+            <key on-delete="noaction">
+                <column name="giver"/>
+            </key>
+            <one-to-many class="hogwarts_package.HousePoints" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="courses_1" optimistic-lock="true" sort="unsorted" table="enrollment">
+            <key on-delete="noaction">
+                <column name="person_enrollment" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="hogwarts_package.Course" not-found="exception" unique="false">
+                <column name="course_enrollment" not-null="true"/>
+            </many-to-many>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="housePointsesForReceiver" optimistic-lock="true" sort="unsorted" table="house_points">
+            <key on-delete="noaction">
+                <column name="receiver"/>
+            </key>
+            <one-to-many class="hogwarts_package.HousePoints" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

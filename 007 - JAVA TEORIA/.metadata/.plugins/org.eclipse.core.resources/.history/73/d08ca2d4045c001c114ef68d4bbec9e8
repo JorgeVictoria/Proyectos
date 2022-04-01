@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package tiposDatos;
+
+/**
+ * Representacion de los diferentes tipos de numeros
+ * @author jvand
+ * @since 13dic2021
+ * @version 1.0
+ *
+ */
+public class Numeros {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		System.out.println("TIPO BYTE");
+		System.out.println("Valor min: " + String.valueOf(Byte.MIN_VALUE));
+		System.out.println("Valor max: " + String.valueOf(Byte.MAX_VALUE));
+		
+		System.out.println("TIPO SHORT");
+		System.out.println("Valor min: " + String.valueOf(Short.MIN_VALUE));
+		System.out.println("Valor max: " + String.valueOf(Short.MAX_VALUE));
+		
+
+	}
+
+}

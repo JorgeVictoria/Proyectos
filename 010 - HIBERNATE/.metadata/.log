@@ -1,0 +1,1333 @@
+!SESSION 2021-12-27 13:11:22.583 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=17.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+This is a continuation of log file \\Mac\Home\Documents\Proyectos\010 - HIBERNATE\.metadata\.bak_0.log
+Created Time: 2021-12-27 13:11:50.457
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-27 13:11:50.458
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jorge'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-27 13:11:57.933
+!MESSAGE An internal error occurred during: "Download quickstarts list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.fetchCategories(ProjectExampleUtil.java:396)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:273)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:263)
+	at org.jboss.tools.project.examples.internal.ProjectExampleXmlProvider.getExamples(ProjectExampleXmlProvider.java:28)
+	at org.jboss.tools.project.examples.internal.ProjectExampleManager.getExamples(ProjectExampleManager.java:60)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$RefreshQuickstartsJob.run(GettingStartedHtmlPage.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:38)
+	... 7 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:36)
+	... 7 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 10 more
+Caused by: java.lang.ExceptionInInitializerError
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 15 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @6af8f631
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:177)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:172)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.<clinit>(Injector.java:172)
+	... 34 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-27 13:11:58.820
+!MESSAGE An internal error occurred during: "Update project wizard list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:38)
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:31)
+	at org.jboss.tools.project.examples.internal.ProjectExamplesActivator.getFavoriteExampleManager(ProjectExamplesActivator.java:1067)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.collectFavorites(GettingStartedHtmlPage.java:283)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.run(GettingStartedHtmlPage.java:274)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:46)
+	... 6 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:44)
+	... 6 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 9 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.sun.xml.bind.v2.runtime.reflect.opt.Injector
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 14 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-12-27 13:14:58.940
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SESSION 2021-12-27 13:15:38.563 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=17.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-12-27 13:15:54.831
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-27 13:15:54.831
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@615bd28b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2b9a7211,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-27 13:15:54.831
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@74ec4df3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5482b32a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-27 13:16:02.476
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jorge'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-27 13:16:08.082
+!MESSAGE An internal error occurred during: "Download quickstarts list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.fetchCategories(ProjectExampleUtil.java:396)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:273)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:263)
+	at org.jboss.tools.project.examples.internal.ProjectExampleXmlProvider.getExamples(ProjectExampleXmlProvider.java:28)
+	at org.jboss.tools.project.examples.internal.ProjectExampleManager.getExamples(ProjectExampleManager.java:60)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$RefreshQuickstartsJob.run(GettingStartedHtmlPage.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:38)
+	... 7 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:36)
+	... 7 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 10 more
+Caused by: java.lang.ExceptionInInitializerError
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 15 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @6b1add4d
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:177)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:172)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.<clinit>(Injector.java:172)
+	... 34 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-27 13:16:08.094
+!MESSAGE An internal error occurred during: "Update project wizard list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:38)
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:31)
+	at org.jboss.tools.project.examples.internal.ProjectExamplesActivator.getFavoriteExampleManager(ProjectExamplesActivator.java:1067)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.collectFavorites(GettingStartedHtmlPage.java:283)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.run(GettingStartedHtmlPage.java:274)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:46)
+	... 6 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:44)
+	... 6 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 9 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.sun.xml.bind.v2.runtime.reflect.opt.Injector
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 14 more
+!SESSION 2021-12-27 13:18:30.320 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=17.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-12-27 13:20:52.465
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-27 13:20:52.465
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1300112e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5955568,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-27 13:20:52.465
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@444fbd13,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@38241615,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-27 13:21:00.530
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jorge'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-27 13:21:07.009
+!MESSAGE An internal error occurred during: "Download quickstarts list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.fetchCategories(ProjectExampleUtil.java:396)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:273)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:263)
+	at org.jboss.tools.project.examples.internal.ProjectExampleXmlProvider.getExamples(ProjectExampleXmlProvider.java:28)
+	at org.jboss.tools.project.examples.internal.ProjectExampleManager.getExamples(ProjectExampleManager.java:60)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$RefreshQuickstartsJob.run(GettingStartedHtmlPage.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:38)
+	... 7 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:36)
+	... 7 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 10 more
+Caused by: java.lang.ExceptionInInitializerError
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 15 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @4ce652b7
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:177)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:172)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.<clinit>(Injector.java:172)
+	... 34 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-27 13:21:07.431
+!MESSAGE An internal error occurred during: "Update project wizard list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:38)
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:31)
+	at org.jboss.tools.project.examples.internal.ProjectExamplesActivator.getFavoriteExampleManager(ProjectExamplesActivator.java:1067)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.collectFavorites(GettingStartedHtmlPage.java:283)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.run(GettingStartedHtmlPage.java:274)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:46)
+	... 6 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:44)
+	... 6 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 9 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.sun.xml.bind.v2.runtime.reflect.opt.Injector
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 14 more
+!SESSION 2021-12-28 10:45:59.846 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=17.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-12-28 10:46:35.481
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-28 10:46:35.482
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1300112e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5955568,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-28 10:46:35.482
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@444fbd13,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@38241615,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-28 10:46:41.795
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jorge'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-28 10:46:47.575
+!MESSAGE An internal error occurred during: "Update project wizard list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:38)
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:31)
+	at org.jboss.tools.project.examples.internal.ProjectExamplesActivator.getFavoriteExampleManager(ProjectExamplesActivator.java:1067)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.collectFavorites(GettingStartedHtmlPage.java:283)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.run(GettingStartedHtmlPage.java:274)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:46)
+	... 6 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:44)
+	... 6 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 9 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.sun.xml.bind.v2.runtime.reflect.opt.Injector
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 14 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-28 10:46:47.580
+!MESSAGE An internal error occurred during: "Download quickstarts list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.fetchCategories(ProjectExampleUtil.java:396)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:273)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:263)
+	at org.jboss.tools.project.examples.internal.ProjectExampleXmlProvider.getExamples(ProjectExampleXmlProvider.java:28)
+	at org.jboss.tools.project.examples.internal.ProjectExampleManager.getExamples(ProjectExampleManager.java:60)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$RefreshQuickstartsJob.run(GettingStartedHtmlPage.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:38)
+	... 7 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:36)
+	... 7 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 10 more
+Caused by: java.lang.ExceptionInInitializerError
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 15 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @646d3be9
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:177)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:172)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.<clinit>(Injector.java:172)
+	... 34 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-12-28 10:47:46.838
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jface.text 4 0 2021-12-28 10:47:48.220
+!MESSAGE java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+!STACK 0
+java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1159)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	... 6 more
+
+!ENTRY org.eclipse.jface.text 4 0 2021-12-28 10:47:48.226
+!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: Se está cerrando la canalización
+!STACK 0
+java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: Se está cerrando la canalización
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2186)
+	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: Se está cerrando la canalización
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
+	at jdk.proxy17/jdk.proxy17.$Proxy100.codeLens(Unknown Source)
+	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
+	... 15 more
+Caused by: java.io.IOException: Se está cerrando la canalización
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:349)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
+	... 20 more
+
+!ENTRY org.eclipse.ui.workbench 4 2 2021-12-28 10:47:48.724
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.hibernate.console.ConsoleConfiguration.getHibernateExtension()" because the return value of "org.hibernate.eclipse.console.AbstractQueryEditor.getConsoleConfiguration()" is null
+	at org.hibernate.eclipse.console.AbstractQueryEditor.getQueryInputModel(AbstractQueryEditor.java:300)
+	at org.hibernate.eclipse.console.views.QueryParametersPage.<init>(QueryParametersPage.java:109)
+	at org.hibernate.eclipse.hqleditor.HQLEditor.getAdapter(HQLEditor.java:297)
+	at org.hibernate.eclipse.console.views.QueryParametersView.doCreatePage(QueryParametersView.java:50)
+	at org.eclipse.ui.part.PageBookView.createPage(PageBookView.java:369)
+	at org.eclipse.ui.part.PageBookView.partActivated(PageBookView.java:696)
+	at org.eclipse.ui.part.PageBookView$1.partActivated(PageBookView.java:1006)
+	at org.eclipse.ui.internal.WorkbenchPage$4.run(WorkbenchPage.java:4914)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.WorkbenchPage.firePartActivated(WorkbenchPage.java:4911)
+	at org.eclipse.ui.internal.WorkbenchPage$E4PartListener.partActivated(WorkbenchPage.java:220)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$2.run(PartServiceImpl.java:250)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.firePartActivated(PartServiceImpl.java:247)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:771)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.lambda$4(StackRenderer.java:979)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:773)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+!SESSION 2021-12-28 20:14:48.864 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=17.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data \\Mac\Home\Documents\Proyectos\010 - HIBERNATE -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-12-28 20:15:04.123
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-28 20:15:04.123
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e2ab1c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@37596b44,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-28 20:15:04.123
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29ec5005,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42ceb67f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-28 20:15:11.613
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jorge'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-28 20:15:17.176
+!MESSAGE An internal error occurred during: "Download quickstarts list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.fetchCategories(ProjectExampleUtil.java:396)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:273)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:263)
+	at org.jboss.tools.project.examples.internal.ProjectExampleXmlProvider.getExamples(ProjectExampleXmlProvider.java:28)
+	at org.jboss.tools.project.examples.internal.ProjectExampleManager.getExamples(ProjectExampleManager.java:60)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$RefreshQuickstartsJob.run(GettingStartedHtmlPage.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:38)
+	... 7 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:36)
+	... 7 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 10 more
+Caused by: java.lang.ExceptionInInitializerError
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 15 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @3d6b9ad6
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:177)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:172)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.<clinit>(Injector.java:172)
+	... 34 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-28 20:15:17.280
+!MESSAGE An internal error occurred during: "Update project wizard list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:38)
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:31)
+	at org.jboss.tools.project.examples.internal.ProjectExamplesActivator.getFavoriteExampleManager(ProjectExamplesActivator.java:1067)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.collectFavorites(GettingStartedHtmlPage.java:283)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.run(GettingStartedHtmlPage.java:274)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:46)
+	... 6 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:44)
+	... 6 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 9 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.sun.xml.bind.v2.runtime.reflect.opt.Injector
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 14 more
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2021-12-28 20:15:35.773
+!MESSAGE Using unsafe http transport to retrieve http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.21.0.Final-SNAPSHOT/REPO/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2021-12-28 20:15:38.987
+!MESSAGE Using unsafe http transport to retrieve http://download.jboss.org/jbosstools/static/photon/development/updates/core/4.21.0.Final/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2021-12-28 20:15:39.883
+!MESSAGE Using unsafe http transport to retrieve http://download.jboss.org/jbosstools/static/photon/development/updates/central/4.21.0.Final/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2021-12-28 20:15:40.719
+!MESSAGE Using unsafe http transport to retrieve http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.21.0.Final-SNAPSHOT/REPO/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.ui.navigator 2 0 2021-12-28 22:08:32.181
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+!SESSION 2021-12-29 11:21:23.351 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=17.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-12-29 11:21:49.522
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-29 11:21:49.522
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f87bc6c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@178f5b5b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-29 11:21:49.522
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47baf547,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@fffb4a8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2021-12-29 11:21:56.435
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-29 11:21:56.484
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jorge'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-29 11:22:00.457
+!MESSAGE An internal error occurred during: "Update project wizard list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:38)
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:31)
+	at org.jboss.tools.project.examples.internal.ProjectExamplesActivator.getFavoriteExampleManager(ProjectExamplesActivator.java:1067)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.collectFavorites(GettingStartedHtmlPage.java:283)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.run(GettingStartedHtmlPage.java:274)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:46)
+	... 6 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:44)
+	... 6 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 9 more
+Caused by: java.lang.ExceptionInInitializerError
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 14 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7e8505f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:177)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:172)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.<clinit>(Injector.java:172)
+	... 33 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-29 11:22:00.463
+!MESSAGE An internal error occurred during: "Download quickstarts list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.fetchCategories(ProjectExampleUtil.java:396)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:273)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:263)
+	at org.jboss.tools.project.examples.internal.ProjectExampleXmlProvider.getExamples(ProjectExampleXmlProvider.java:28)
+	at org.jboss.tools.project.examples.internal.ProjectExampleManager.getExamples(ProjectExampleManager.java:60)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$RefreshQuickstartsJob.run(GettingStartedHtmlPage.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:38)
+	... 7 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:36)
+	... 7 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 10 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.sun.xml.bind.v2.runtime.reflect.opt.Injector
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 15 more
+!SESSION 2021-12-29 11:25:04.159 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=17.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-12-29 11:25:20.515
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-29 11:25:20.515
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f87bc6c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@178f5b5b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-29 11:25:20.516
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47baf547,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@fffb4a8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2021-12-29 11:25:27.566
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-29 11:25:27.594
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jorge'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-29 11:25:32.973
+!MESSAGE An internal error occurred during: "Update project wizard list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:38)
+	at org.jboss.tools.project.examples.internal.FavoriteExampleManager.<init>(FavoriteExampleManager.java:31)
+	at org.jboss.tools.project.examples.internal.ProjectExamplesActivator.getFavoriteExampleManager(ProjectExamplesActivator.java:1067)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.collectFavorites(GettingStartedHtmlPage.java:283)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$5$2.run(GettingStartedHtmlPage.java:274)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:46)
+	... 6 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.FavoriteItemXmlSerializer.<clinit>(FavoriteItemXmlSerializer.java:44)
+	... 6 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 9 more
+Caused by: java.lang.ExceptionInInitializerError
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 14 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @49f5bf61
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:177)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1.run(Injector.java:172)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.<clinit>(Injector.java:172)
+	... 33 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-12-29 11:25:32.980
+!MESSAGE An internal error occurred during: "Download quickstarts list".
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.fetchCategories(ProjectExampleUtil.java:396)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:273)
+	at org.jboss.tools.project.examples.model.ProjectExampleUtil.getCategories(ProjectExampleUtil.java:263)
+	at org.jboss.tools.project.examples.internal.ProjectExampleXmlProvider.getExamples(ProjectExampleXmlProvider.java:28)
+	at org.jboss.tools.project.examples.internal.ProjectExampleManager.getExamples(ProjectExampleManager.java:60)
+	at org.jboss.tools.central.editors.GettingStartedHtmlPage$RefreshQuickstartsJob.run(GettingStartedHtmlPage.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:38)
+	... 7 more
+Caused by: javax.xml.bind.JAXBException: Unable to create context
+ - with linked exception:
+[java.lang.reflect.InvocationTargetException]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:107)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:618)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:565)
+	at org.jboss.tools.project.examples.internal.model.ProjectExampleCategoryParser.<clinit>(ProjectExampleCategoryParser.java:36)
+	... 7 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:105)
+	... 10 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.sun.xml.bind.v2.runtime.reflect.opt.Injector
+	at com.sun.xml.bind.v2.runtime.reflect.opt.AccessorInjector.prepare(AccessorInjector.java:83)
+	at com.sun.xml.bind.v2.runtime.reflect.opt.OptimizedAccessorFactory.get(OptimizedAccessorFactory.java:176)
+	at com.sun.xml.bind.v2.runtime.reflect.Accessor$FieldReflection.optimize(Accessor.java:291)
+	at com.sun.xml.bind.v2.runtime.property.ArrayProperty.<init>(ArrayProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.<init>(ArrayERProperty.java:88)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.<init>(ArrayElementProperty.java:100)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.<init>(ArrayElementNodeProperty.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.sun.xml.bind.v2.runtime.property.PropertyFactory.create(PropertyFactory.java:128)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.<init>(ClassBeanInfoImpl.java:182)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getOrCreate(JAXBContextImpl.java:514)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:331)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:142)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1174)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:162)
+	... 15 more

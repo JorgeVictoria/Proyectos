@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23 dic 2021 0:22:00 by Hibernate Tools 5.5.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="starwars" dynamic-insert="false" dynamic-update="false" mutable="true" name="starwars.Planets" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="planets">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="name"/>
+        </property>
+        <property generated="never" lazy="false" name="rotationPeriod" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="rotation_period"/>
+        </property>
+        <property generated="never" lazy="false" name="orbitalPeriod" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="orbital_period"/>
+        </property>
+        <property generated="never" lazy="false" name="diameter" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="diameter"/>
+        </property>
+        <property generated="never" lazy="false" name="climate" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="climate"/>
+        </property>
+        <property generated="never" lazy="false" name="gravity" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="gravity"/>
+        </property>
+        <property generated="never" lazy="false" name="terrain" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="terrain"/>
+        </property>
+        <property generated="never" lazy="false" name="surfaceWater" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="surface_water"/>
+        </property>
+        <property generated="never" lazy="false" name="population" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="population"/>
+        </property>
+        <property generated="never" lazy="false" name="createdDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="created_date" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="updatedDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="updated_date" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="url" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="url"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="characterses" optimistic-lock="true" sort="unsorted" table="characters">
+            <key on-delete="noaction">
+                <column name="planet_id" not-null="true"/>
+            </key>
+            <one-to-many class="starwars.Characters" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

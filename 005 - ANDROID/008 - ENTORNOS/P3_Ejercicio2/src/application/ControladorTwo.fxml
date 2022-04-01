@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="470.0" prefWidth="702.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="application.ControllerTwo">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="423.0" text="2. NFL ¿de que ciudad son los Packers?" textAlignment="CENTER" textOverrun="CLIP" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <ComboBox fx:id="idComboBox2" onAction="#SeleccioComboBox2" prefWidth="150.0" visibleRowCount="3" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+      </ComboBox>
+   </center>
+</BorderPane>

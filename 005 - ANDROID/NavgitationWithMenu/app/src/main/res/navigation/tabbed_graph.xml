@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabbed_graph"
+    app:startDestination="@id/tabbed1Fragment">
+
+    <fragment
+        android:id="@+id/tabbed1Fragment"
+        android:name="com.jovian.navgitationwithmenu.Tabbed1Fragment"
+        android:label="fragment_tabbed1"
+        tools:layout="@layout/fragment_tabbed1" />
+</navigation>

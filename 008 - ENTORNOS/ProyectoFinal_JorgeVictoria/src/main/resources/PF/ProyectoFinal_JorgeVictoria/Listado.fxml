@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PF.ProyectoFinal_JorgeVictoria.ListaController">
+   <children>
+      <Label alignment="CENTER" layoutX="254.0" layoutY="55.0" prefHeight="42.0" prefWidth="330.0" text="Entradas Vendidas">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="36.0" />
+         </font>
+         <styleClass>
+            <String fx:value="Label" />
+            <String fx:value="header" />
+         </styleClass>
+      </Label>
+      <ListView fx:id="lvListado" layoutX="20.0" layoutY="125.0" prefHeight="473.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,94 @@
+package hogwarts;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+public class Practica05 {
+
+	public static void main(String[] args) throws IOException {
+		
+		//Inicializamos el entorno Hibernate
+		Configuration cfg = new Configuration().configure();
+		
+		//crear el ejemplar de session factory
+		SessionFactory sf = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+		
+		//abrir la sesion
+		Session sesion = sf.openSession();
+		
+		//ejercicio01
+		//crearTablaBooks(sesion);
+		cargarLibros(sesion);
+		
+		//cerrar la sesion
+		sesion.close();
+	}
+
+	/**
+	 * metodo para crear una tabla con los libros de la academia Hogwarts
+	 * @param sesion
+	 */
+	private static void crearTablaBooks(Session sesion) {
+		
+		//creamos una variable de tipo Transaction para iniciar la transaccion
+		//en este caso la transaccion es la generacion de una tabla
+		Transaction tx = sesion.beginTransaction();
+		
+		//creamos la cadena con la sentencia a ejecutar
+		String sql = "CREATE TABLE books(\r\n"
+				+ " id INTEGER NOT NULL AUTO_INCREMENT, \r\n"
+				+ " title Varchar(300) not null,\r\n"
+				+ " year INTEGER, \r\n"
+				+ " id_Subject INTEGER, \r\n"
+				+ " PRIMARY KEY (id),\r\n"
+				+ " FOREIGN KEY (id_Subject) REFERENCES course(id)\r\n"
+				+ ");";
+		
+		//creamos la query para ejecutar la creacion de la tabla
+		sesion.createSQLQuery(sql).executeUpdate();
+		
+		//hacemos el commit para confirmar la transaccion
+		tx.commit();
+		
+	}
+	
+	/**
+	 * metodo para cargar los libros en la tabla Libros que hemos creado
+	 * @param sesion
+	 * @throws IOException 
+	 */
+	private static void cargarLibros(Session sesion) throws IOException {
+		
+		//variables locales
+		String separator = ";";
+		String quote = "\"";
+		BufferedReader br = null;
+		
+		try {
+			br = new BufferedReader(new FileReader("files/Harry_Potter_libros.csv"));
+			String line = br.readLine();
+			while (line != null) {
+				String [] fields = line.split(separator);
+				System.out.println(Arrays.toString(fields));
+				line = br.readLine();
+			}
+		} catch (Exception e) {
+			System.out.println("error en la lectura del fichero");
+		} finally {
+			if(br != null) {
+				br.close();
+			}
+		}
+		
+		
+	}
+
+}

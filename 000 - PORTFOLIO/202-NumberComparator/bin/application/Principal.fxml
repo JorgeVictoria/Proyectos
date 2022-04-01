@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" styleClass="AnchorPane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrincipalController">
+   <children>
+      <Label alignment="CENTER" layoutX="28.0" layoutY="56.0" prefHeight="46.0" prefWidth="530.0" styleClass="Head" stylesheets="@application.css" text="Number Comparator" />
+      <Label layoutX="113.0" layoutY="173.0" styleClass="Label" stylesheets="@application.css" text="Number 1" />
+      <TextField fx:id="tfNumber1" layoutX="325.0" layoutY="171.0" prefHeight="35.0" prefWidth="166.0" styleClass="TextField" stylesheets="@application.css" />
+      <Label layoutX="113.0" layoutY="241.0" styleClass="Label" stylesheets="@application.css" text="Number 2" />
+      <Button fx:id="btnCompare" layoutX="242.0" layoutY="328.0" mnemonicParsing="false" onAction="#compareNumbers" prefHeight="46.0" prefWidth="116.0" styleClass="Button" stylesheets="@application.css" text="Compare" />
+      <Label fx:id="lbWarning" layoutX="28.0" layoutY="418.0" prefHeight="17.0" prefWidth="530.0" styleClass="Warning" stylesheets="@application.css" />
+      <TextField fx:id="tfNumber2" layoutX="325.0" layoutY="239.0" prefHeight="35.0" prefWidth="166.0" styleClass="TextField" stylesheets="@application.css" />
+   </children>
+</AnchorPane>

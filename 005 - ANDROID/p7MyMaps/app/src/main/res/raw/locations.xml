@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <locations>
+    <location>
+        <title>La Posada del arroz</title>
+        <fragment>https://torrentmarket.es/la-posada-del-arroz/</fragment>
+        <tag>Arroceria</tag>
+        <latitude>39.428963</latitude>
+        <longitude>-0.478205</longitude>
+    </location>
+    <location>
+        <title>La Torreta</title>
+        <fragment>https://latorreta1888.com/</fragment>
+        <tag>Arroceria</tag>
+        <latitude>39.4239794</latitude>
+        <longitude>-0.4902169</longitude>
+    </location>
+    <location>
+        <title>Balco del Vedat</title>
+        <fragment>https://www.balcodelvedat.com/</fragment>
+        <tag>Arroceria</tag>
+        <latitude>39.4232382</latitude>
+        <longitude>-0.4906831</longitude>
+    </location>
+    <location>
+        <title>Restaurante Bembezar</title>
+        <fragment>https://restaurantebembezar.es</fragment>
+        <tag>Arroceria</tag>
+        <latitude>39.4220789</latitude>
+        <longitude>-0.4892211</longitude>
+    </location>
+    <location>
+        <title>Casa el Chesus</title>
+        <fragment>http://casaelchesus.es</fragment>
+        <tag>Arroceria</tag>
+        <latitude>39.4421269</latitude>
+        <longitude>-0.4625075</longitude>
+    </location>
+    <location>
+        <title>Farmacia Campos Carratala</title>
+        <fragment>91572993</fragment>
+        <tag>farmacia</tag>
+        <latitude>39.4338599</latitude>
+        <longitude>-0.4802195</longitude>
+    </location>
+    <location>
+        <title>Farmacia San Valeriano</title>
+        <fragment>961081430</fragment>
+        <tag>farmacia</tag>
+        <latitude>39.4335642</latitude>
+        <longitude>-0.4773973</longitude>
+    </location>
+    <location>
+        <title>Farmacia Cabañes</title>
+        <fragment>961551584</fragment>
+        <tag>farmacia</tag>
+        <latitude>39.4345905</latitude>
+        <longitude>-0.4747608</longitude>
+    </location>
+    <location>
+        <title>Farmacia Maria Gomez-Lobo</title>
+        <fragment>961564558</fragment>
+        <tag>farmacia</tag>
+        <latitude>39.4329225</latitude>
+        <longitude>-0.4740204</longitude>
+    </location>
+    <location>
+        <title>Farmacia Avenida</title>
+        <fragment>961555441</fragment>
+        <tag>farmacia</tag>
+        <latitude>39.4310824</latitude>
+        <longitude>-0.474125</longitude>
+    </location>
+</locations>

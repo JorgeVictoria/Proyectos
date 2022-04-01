@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BegudesController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="28.0" prefHeight="25.0" prefWidth="170.0" text="FAST BURGUERS" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="70.0" text="Begudes">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="CocaCola" fitHeight="102.0" fitWidth="157.0" layoutX="73.0" layoutY="109.0" onMouseClicked="#DemanarCocaCola" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/CocaCola.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Agua" fitHeight="92.0" fitWidth="142.0" layoutX="67.0" layoutY="246.0" onMouseClicked="#DemanarAgua" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Agua.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="39.0" layoutX="215.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hamburguesa.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

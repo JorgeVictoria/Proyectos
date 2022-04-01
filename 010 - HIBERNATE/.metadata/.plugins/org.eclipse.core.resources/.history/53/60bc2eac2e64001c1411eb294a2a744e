@@ -1,0 +1,48 @@
+package hogwarts;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Inicializamos el entorno Hibernate
+		Configuration cfg = new Configuration().configure();
+		
+		//crear el ejemplar de session factory
+		SessionFactory sf = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+		
+		//abrir la sesion
+		Session sesion = sf.openSession();
+		
+		//ejercicio 1
+		ejercicio1(sesion);
+		
+		//cerrar la sesion
+		sf.close();
+
+	}
+	
+	/**
+	 * metodo para obtener los mimebros de la familia Potter
+	 * @param sesion
+	 */
+	 private static void ejercicio1(Session sesion){
+		 
+		 //banner inicial
+		 System.out.println();
+		 System.out.println("Ejercicio 1: ");
+		 System.out.println();
+		 
+		 @SuppressWarnings("unchecked")
+		List <Person> li = (List<Person>) sesion.createQuery("from Person as pe join pe.house as ho where pe.lastName = 'Potter'").getResultList();
+		for(Person pe: li)System.out.println(pe.getFirstName());
+		}
+
+}

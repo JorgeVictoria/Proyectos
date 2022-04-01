@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="Salir3" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerPantalla3">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Resultados PLataformas Favoritas VOD" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="500.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="PLATAFORMA" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="83.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="VOTOS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="PORCENTAJE" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="500.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="NETFLIX" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="105.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="NetVotos" alignment="CENTER" contentDisplay="CENTER" text="0" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="101.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="NetPorcent" alignment="CENTER" contentDisplay="CENTER" text="0%" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="115.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="500.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="HBO" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="110.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="HBOVotos" alignment="CENTER" contentDisplay="CENTER" text="0" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="115.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="HBOPorcent" alignment="CENTER" contentDisplay="CENTER" text="0%" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="115.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="55.0" prefWidth="500.0">
+               <children>
+                  <Label fx:id="DISNEYPorcent" alignment="CENTER" contentDisplay="CENTER" text="DISNEY+" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="110.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="DisneyVotos" alignment="CENTER" contentDisplay="CENTER" text="0" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="92.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="DisneyPorcent" alignment="CENTER" contentDisplay="CENTER" text="0%" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="115.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="63.0" prefWidth="500.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="OTROS" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="OtrosVotos" alignment="CENTER" contentDisplay="CENTER" text="0" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="102.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="OtrosPorcent" alignment="CENTER" contentDisplay="CENTER" text="0%" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="115.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Salir" mnemonicParsing="false" onAction="#salida" text="Volver a votar">
+               <HBox.margin>
+                  <Insets left="130.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="grafico" mnemonicParsing="false" onAction="#verGrafico" text="Ver Grafico">
+               <HBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

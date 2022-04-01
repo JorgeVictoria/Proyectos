@@ -1,0 +1,9 @@
+- listar los nombres de la carpeta actual. Hacer un dir, vamos.
+- Leer una carpeta e indicar cuantas carpetas y ficheros tiene.
+- Leer una carpeta y decir cuantos niveles hay por debajo.
+- Leer una carpeta y cuenta(si son ficheros) el peso de la informacion que hay guardada.
+- Leer una carpeta y cuenta(si son ficheros) el peso de la informacion que hay guardada. Tambien dentro de las subcarpetas.
+- Leer carpeta, leer una extension y que borre todos los ficheros que tengan esa extension.
+
+Con el listFiles podemos usar el metodo o interfaz filefilter para filtrar archivos por tipo
+f.list(new FileFilter() {public boolean accept(){return this.getname().endsWith(extension)});

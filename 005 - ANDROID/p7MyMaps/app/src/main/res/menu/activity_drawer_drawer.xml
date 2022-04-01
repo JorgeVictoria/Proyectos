@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_group1">
+        <item
+            android:id="@+id/option1"
+            android:title="@string/mostrarme"
+            android:checked="true" />
+        <item
+            android:id="@+id/option2"
+            android:title="@string/ocultarme"
+            android:checked="true"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_group2">
+
+        <item
+            android:id="@+id/option3"
+            android:title="@string/arroz"
+            android:checked="true"/>
+        <item
+            android:id="@+id/option4"
+            android:title="@string/farmacias"
+            android:checked="true"/>
+        <item
+            android:id="@+id/option5"
+            android:title="@string/ocultar"
+            android:checked="true"/>
+    </group>
+    <group
+        android:id="@+id/menu_group3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/option6"
+            android:title="@string/cerrar"
+            android:checked="true"/>
+        <item
+            android:id="@+id/option7"
+            android:title="@string/salir"
+            android:checked="true"/>
+    </group>
+</menu>

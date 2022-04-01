@@ -1,0 +1,1 @@
+https://download.jboss.org/jbosstools/photon/stable/updates/

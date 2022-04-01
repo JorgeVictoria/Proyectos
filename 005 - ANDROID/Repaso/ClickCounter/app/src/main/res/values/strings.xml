@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ClickCounter</string>
+    <string name="tvClicks">You have clicked 0 times</string>
+</resources>

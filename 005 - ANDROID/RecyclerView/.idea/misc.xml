@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Workspace/Android/Kotlin/RecyclerView/app/src/main/res/layout-land/activity_main.xml" value="0.31040564373897706" />
+        <entry key="..\:/Workspace/Android/Kotlin/RecyclerView/app/src/main/res/layout/activity_main.xml" value="0.21693840579710144" />
+        <entry key="..\:/Workspace/Android/Kotlin/RecyclerView/app/src/main/res/layout/fragment_detail.xml" value="0.36096014492753625" />
+        <entry key="..\:/Workspace/Android/Kotlin/RecyclerView/app/src/main/res/layout/fragment_list.xml" value="0.36096014492753625" />
+        <entry key="..\:/Workspace/Android/Kotlin/RecyclerView/app/src/main/res/layout/list_item.xml" value="0.20520833333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

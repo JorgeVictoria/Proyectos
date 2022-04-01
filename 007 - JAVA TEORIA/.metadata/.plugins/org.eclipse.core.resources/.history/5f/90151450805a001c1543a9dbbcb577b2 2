@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package variables;
+
+/**
+ * introduccion a la declaracion e inicializacion de variables
+ * @author jvand
+ * @since 11dic2021
+ * @version 1.0
+ */
+public class Variables {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		//variables locales
+		int numero = 7;
+		char letra = 'c';
+		
+		//variables constantes
+		final int NUM_HORAS = 8;
+		
+		//impresion por pantalla
+		System.out.println("numero = " + numero);
+		System.out.println("letra = " + letra);
+		System.out.println("num_horas = " + NUM_HORAS);
+
+	}
+
+}

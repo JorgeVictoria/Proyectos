@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_group1">
+        <item
+            android:id="@+id/option1"
+            android:title="option1" />
+        <item
+            android:id="@+id/option2"
+            android:title="option2" />
+        <item
+            android:id="@+id/option3"
+            android:title="option3" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_group2">
+        <item
+            android:id="@+id/option4"
+            android:title="option4" />
+        <item
+            android:id="@+id/option5"
+            android:title="option5" />
+        <item
+            android:id="@+id/option6"
+            android:title="option6" />
+    </group>
+</menu>

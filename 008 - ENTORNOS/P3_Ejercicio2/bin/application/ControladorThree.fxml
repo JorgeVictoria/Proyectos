@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="470.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerThree">
+   <top>
+      <Label alignment="CENTER" prefHeight="69.0" prefWidth="423.0" text="3. MLB ¿De que ciudad son los Yankees?" textAlignment="CENTER" textOverrun="CLIP" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <ComboBox fx:id="idComboBox3" onAction="#SeleccioComboBox3" prefWidth="150.0" visibleRowCount="3" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+      </ComboBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 27 dic 2021 11:38:31 by Hibernate Tools 5.5.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="hogwarts" dynamic-insert="false" dynamic-update="false" mutable="true" name="hogwarts.Books" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="books">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="hogwarts.Course" embed-xml="true" fetch="select" insert="true" name="course" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="id_Subject"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="title" optimistic-lock="true" type="string" unique="false">
+            <column length="300" name="title" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="year" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="year"/>
+        </property>
+    </class>
+</hibernate-mapping>

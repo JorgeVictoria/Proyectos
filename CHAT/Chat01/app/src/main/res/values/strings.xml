@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Chat01</string>
+    <string name="this_is_a_sample_message_that_will_appear">This is a sample message that will appear</string>
+</resources>

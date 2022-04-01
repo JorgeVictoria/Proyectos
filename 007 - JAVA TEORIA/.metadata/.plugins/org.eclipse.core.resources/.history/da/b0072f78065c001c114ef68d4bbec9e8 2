@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package tiposDatos;
+
+/**
+ * ejemplo de uso de operadores numericos
+ * @author jvand
+ * @version 1.0
+ * @since 13dic2021
+ *
+ */
+public class OperadoresNumericos {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		//variables locales
+		int x = 5;
+		
+		//operaciones de incremento y decremento de un valor
+		System.out.println(x);
+		x++;	//incremento en uno
+		System.out.println(x);
+		x--;	//decremento en uno
+		System.out.println(x);
+		
+		
+
+	}
+
+}

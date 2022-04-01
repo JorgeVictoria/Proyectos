@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package tiposDatos;
+
+/**
+ * Representacion de los diferentes tipos de numeros
+ * @author jvand
+ * @since 13dic2021
+ * @version 1.0
+ *
+ */
+public class Numeros {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		System.out.println("TIPO BYTE");
+		System.out.println("Valor min: " + String.valueOf(Byte.MIN_VALUE));
+		System.out.println("Valor max: " + String.valueOf(Byte.MAX_VALUE));
+		
+		System.out.println("TIPO SHORT");
+		System.out.println("Valor min: " + String.valueOf(Short.MIN_VALUE));
+		System.out.println("Valor max: " + String.valueOf(Short.MAX_VALUE));
+		
+		System.out.println("TIPO INT");
+		System.out.println("Valor min: " + String.valueOf(Integer.MIN_VALUE));
+		System.out.println("Valor max: " + String.valueOf(Integer.MAX_VALUE));
+		
+		System.out.println("TIPO LONG");
+		System.out.println("Valor min: " + String.valueOf(Long.MIN_VALUE));
+		System.out.println("Valor max: " + String.valueOf(Long.MAX_VALUE));
+		
+		System.out.println("TIPO FLOAT");
+		System.out.println("Valor min: " + String.valueOf(Float.MIN_VALUE));
+		System.out.println("Valor max: " + String.valueOf(Float.MAX_VALUE));
+		
+		System.out.println("TIPO DOUBLE");
+		System.out.println("Valor min: " + String.valueOf(Double.MIN_VALUE));
+		System.out.println("Valor max: " + String.valueOf(Double.MAX_VALUE));
+		
+
+	}
+
+}

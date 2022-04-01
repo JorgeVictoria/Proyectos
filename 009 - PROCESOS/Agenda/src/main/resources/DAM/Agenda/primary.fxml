@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DAM.Agenda.PrimaryController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="56.0" prefHeight="17.0" prefWidth="581.0" text="AGENDA TELEFONICA">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnInsertar" layoutX="249.0" layoutY="136.0" mnemonicParsing="false" onAction="#insertarContacto" text="Insertar contactos" />
+      <Button fx:id="btnInforme" layoutX="253.0" layoutY="216.0" mnemonicParsing="false" onAction="#generarInforme" text="Generar Informe" />
+   </children>
+</AnchorPane>

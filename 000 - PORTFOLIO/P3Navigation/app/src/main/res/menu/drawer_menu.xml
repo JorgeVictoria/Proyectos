@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/somosFragment"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Quienes Somos" />
+
+    <item
+        android:id="@+id/ofrecemosFragment"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Que ofrecemos" />
+
+    <item
+        android:id="@+id/contactoFragment"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Contacto" />
+
+</menu>

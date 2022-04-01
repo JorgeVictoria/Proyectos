@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.TilePane?>
+
+
+<TilePane prefHeight="498.0" prefWidth="564.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="application.SampleController">
+   <children>
+      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="70.0" text="Button" />
+      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="63.0" text="Button" />
+   </children>
+</TilePane>

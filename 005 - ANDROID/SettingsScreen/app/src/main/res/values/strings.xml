@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SettingsScreen</string>
+    <string name="action_settings">actionSettings</string>
+    <string name="action">action</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shared_preferences_nin_settings_screen">Shared Preferences\nin Settings Screen</string>
+    <string name="shared_preferences_in_settings_screen">in_settings_screen</string>
+</resources>

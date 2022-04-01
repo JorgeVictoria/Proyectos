@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ANIMALS>
+<persona>
+<Nombre>Domingo Fiesta Segura</Nombre>
+<eMail>domise@hotmail.com</eMail>
+<telefono>123456789</telefono>
+</persona>
+<persona>
+<Nombre>Aitor Tilla</Nombre>
+<eMail>itilla@gmail.com</eMail>
+<telefono>987654321</telefono>
+</persona>
+<persona>
+<Nombre>Ines Esario</Nombre>
+<eMail>isario@gmail.com</eMail>
+<telefono>876543219</telefono>
+</persona>
+<persona>
+<Nombre>Elvis Nieto</Nombre>
+<eMail>wlnieto@gmail.com</eMail>
+<telefono>765432109</telefono>
+</persona>
+<persona>
+<Nombre>Susana Oria</Nombre>
+<eMail>susana@gmail.com</eMail>
+<telefono>565654542</telefono>
+</persona>
+</ANIMALS>

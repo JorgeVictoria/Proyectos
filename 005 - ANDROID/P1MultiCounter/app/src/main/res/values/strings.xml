@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">P1MultiCounter</string>
+    <string name="valor_inicial">0</string>
+    <string name="reset_all">RESET ALL</string>
+    <string name="reset">RESET</string>
+    <string name="decremento">-1</string>
+    <string name="incremento">+1</string>
+    <string name="contador">0</string>
+</resources>

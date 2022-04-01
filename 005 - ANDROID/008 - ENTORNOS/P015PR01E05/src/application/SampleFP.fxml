@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+
+<FlowPane columnHalignment="CENTER" prefHeight="484.0" prefWidth="626.0" rowValignment="TOP" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <Button mnemonicParsing="false" text="Button1" />
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Button2" />
+      <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="67.0" text="Button3" />
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Button4" />
+      <Button mnemonicParsing="false" text="Button5" />
+      <Button mnemonicParsing="false" text="Button6" />
+      <Button mnemonicParsing="false" text="Button7" />
+      <Button mnemonicParsing="false" prefHeight="89.0" prefWidth="115.0" text="BigButton" />
+   </children>
+</FlowPane>

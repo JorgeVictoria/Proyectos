@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23 dic 2021 0:22:00 by Hibernate Tools 5.5.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="starwars" dynamic-insert="false" dynamic-update="false" mutable="true" name="starwars.Characters" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="characters">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="starwars.Planets" embed-xml="true" fetch="select" insert="true" name="planets" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="planet_id" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="name"/>
+        </property>
+        <property generated="never" lazy="false" name="height" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="height"/>
+        </property>
+        <property generated="never" lazy="false" name="mass" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="mass" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="hairColor" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="hair_color"/>
+        </property>
+        <property generated="never" lazy="false" name="skinColor" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="skin_color"/>
+        </property>
+        <property generated="never" lazy="false" name="eyeColor" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="eye_color"/>
+        </property>
+        <property generated="never" lazy="false" name="birthYear" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="birth_year"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="gender"/>
+        </property>
+        <property generated="never" lazy="false" name="createdDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="created_date" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="updatedDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="updated_date" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="url" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="url"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="affiliationses" optimistic-lock="true" sort="unsorted" table="character_affiliations">
+            <key on-delete="noaction">
+                <column name="id_character" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="starwars.Affiliations" not-found="exception" unique="false">
+                <column name="id_affiliation" not-null="true"/>
+            </many-to-many>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="filmses" optimistic-lock="true" sort="unsorted" table="character_films">
+            <key on-delete="noaction">
+                <column name="id_character" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="starwars.Films" not-found="exception" unique="false">
+                <column name="id_film" not-null="true"/>
+            </many-to-many>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="deathsesForIdKiller" optimistic-lock="true" sort="unsorted" table="deaths">
+            <key on-delete="noaction">
+                <column name="id_killer"/>
+            </key>
+            <one-to-many class="starwars.Deaths" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="deathsesForIdCharacter" optimistic-lock="true" sort="unsorted" table="deaths">
+            <key on-delete="noaction">
+                <column name="id_character"/>
+            </key>
+            <one-to-many class="starwars.Deaths" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

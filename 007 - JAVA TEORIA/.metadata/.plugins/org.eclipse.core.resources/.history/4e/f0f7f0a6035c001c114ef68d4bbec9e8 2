@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package literales;
+
+/**
+ * Ejemplos de uso de variables y su inicializacion con valores literales
+ * @author jvand
+ * @version 1.0
+ * @since 13dic2021
+ */
+public class Literales {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		//los valores literales representan un valor fijo
+		//se escriben directamente en el codigo
+		//se usa el operador de asignacion '='
+		
+		//algunos ejemplos
+		boolean resultado = true;
+		char letraMayuscula = 'C';
+		byte by = 100;
+		short sh = 1000;
+		int in = 100000;
+		
+		//representacion de numeros
+		//26 en decimal
+		int decVal = 26;
+		//26 en hexadecimal
+		int hexVal = 0x1a;
+		//26 en binario
+		int binVal = 0b11010;
+		//26 en octal
+		int octVal = 032;
+		
+		//representacion de numeros largos
+		long creditCardNumber = 1234_5678_9012_3456L;
+		
+		//mostramos por consola el valor de alguna variables
+		System.out.println(resultado);
+
+	}
+
+}

@@ -1,0 +1,125 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SomosFragment">
+
+        <ImageView
+            android:id="@+id/ivLogo2"
+            android:layout_width="wrap_content"
+            android:layout_height="247dp"
+            android:src="@drawable/computer"
+            android:layout_gravity="center"/>
+
+
+        <ImageView
+            android:id="@+id/ivJava"
+            android:layout_width="116dp"
+            android:layout_height="107dp"
+            android:layout_gravity="center"
+            android:src="@drawable/java" />
+
+        <TextView
+            android:id="@+id/tvofr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto11"
+            android:textSize="16sp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/bbdd"
+            android:layout_width="116dp"
+            android:layout_height="107dp"
+            android:src="@drawable/bbdd"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvofr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto12"
+            android:textSize="16sp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/ivWeb"
+            android:layout_width="116dp"
+            android:layout_height="107dp"
+            android:src="@drawable/web"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvofr3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto13"
+            android:textSize="16sp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/ivAndroid"
+            android:layout_width="116dp"
+            android:layout_height="107dp"
+            android:src="@drawable/androidogo"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvofr4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto14"
+            android:textSize="16sp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/ivServer"
+            android:layout_width="116dp"
+            android:layout_height="107dp"
+            android:src="@drawable/server"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvofr5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto15"
+            android:textSize="16sp"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

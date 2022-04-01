@@ -1,0 +1,194 @@
+package hogwarts;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+public class Practica05 {
+
+	public static void main(String[] args) throws IOException {
+		
+		//Inicializamos el entorno Hibernate
+		Configuration cfg = new Configuration().configure();
+		
+		//crear el ejemplar de session factory
+		SessionFactory sf = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+		
+		//abrir la sesion
+		Session sesion = sf.openSession();
+		
+		//ejercicio01
+		//crearTablaBooks(sesion);
+		//cargarLibros(sesion);
+		
+		//ejercicio02
+		//verPuntosQuitados(sesion);
+		//duplicarPuntos(sesion);
+		//verPuntosQuitados(sesion);
+		
+		//ejercicio03
+		verMatriculadosMugles(sesion);
+		
+		//cerrar la sesion
+		sesion.close();
+	}
+
+	/**
+	 * metodo para crear una tabla con los libros de la academia Hogwarts
+	 * @param sesion
+	 */
+	private static void crearTablaBooks(Session sesion) {
+		
+		//creamos una variable de tipo Transaction para iniciar la transaccion
+		//en este caso la transaccion es la generacion de una tabla
+		Transaction tx = sesion.beginTransaction();
+		
+		//creamos la cadena con la sentencia a ejecutar
+		String sql = "CREATE TABLE books(\r\n"
+				+ " id INTEGER NOT NULL AUTO_INCREMENT, \r\n"
+				+ " title Varchar(300) not null,\r\n"
+				+ " year INTEGER, \r\n"
+				+ " id_Subject INTEGER, \r\n"
+				+ " PRIMARY KEY (id),\r\n"
+				+ " FOREIGN KEY (id_Subject) REFERENCES course(id)\r\n"
+				+ ");";
+		
+		//creamos la query para ejecutar la creacion de la tabla
+		sesion.createSQLQuery(sql).executeUpdate();
+		
+		//hacemos el commit para confirmar la transaccion
+		tx.commit();
+		
+	}
+	
+	/**
+	 * metodo para cargar los libros en la tabla Libros que hemos creado
+	 * @param sesion
+	 * @throws IOException 
+	 */
+	private static void cargarLibros(Session sesion) throws IOException {
+		
+		//variables locales
+		String separator = ";";
+		BufferedReader br = null;
+		Transaction tx;
+		int idCurso;
+		
+		//creamos un arrayList con los cursos del centro y su id
+		ArrayList<Course> cursos = new ArrayList<Course>();
+		int id = 1;
+		Course curso;
+		do {
+			curso = (Course) sesion.get(Course.class, id++);
+			if(curso!=null) cursos.add(curso);
+		} while (curso!=null);
+		
+		try {
+			//fichero que vamos a leer
+			br = new BufferedReader(new FileReader("files/Harry_Potter_libros.csv"));
+			//creamos un objeto String y leemos la primera linea
+			String line = br.readLine();
+			//saltamos la cabecera del csv
+			line = br.readLine();
+			//mientras haya lineas que leer, almacenamos los datos en un array y vamos leyendo
+			while (line != null) {
+				//almacenamos en un array las lineas
+				String [] fields = line.split(separator);
+				//iniciamos la transaccion
+				tx = sesion.beginTransaction();
+				//creamos un objeto book
+				Books book = new Books();
+				//pasamos el titulo del libro
+				book.setTitle(fields[0]);
+				//pasamos el año del curso
+				book.setYear(Integer.parseInt(fields[1]));
+				//pasamos el curso al que pertenece
+				for(int i = 0; i < cursos.size(); i++) {
+					if(fields[2].toLowerCase().equals(cursos.get(i).getName().toLowerCase())) {
+						book.setCourse(cursos.get(i));
+					}
+				}
+				System.out.println(fields[2]);
+				//salvamos los datos
+				sesion.save(book);
+				//confirmamos la transaccion
+				tx.commit();
+				//leemos una nueva linea del csv
+				line = br.readLine();
+			}
+		} catch (Exception e) {
+			System.out.println("error en la lectura del fichero");
+		} finally {
+			if(br != null) {
+				br.close();
+			}
+		}
+		
+	}
+	
+	/**
+	 * metodo para calcular los puntos que Severus Snape quita o pone a HPotter y RWeasley
+	 * @param sesion
+	 */
+	private static void verPuntosQuitados(Session sesion) {
+		
+		//variable para contar el total de puntos
+		int puntosTotales = 0;
+		
+		//almacenamos en un objeto de tipo list la query
+		List<HousePoints> li = sesion.createQuery("from HousePoints as hp where ((hp.personByReceiver.firstName = ?1 and hp.personByReceiver.lastName = ?2) or (hp.personByReceiver.firstName = ?3 and hp.personByReceiver.lastName = ?4))  and (hp.personByGiver.firstName = ?5 and hp.personByGiver.lastName = ?6)")
+				.setParameter(1, "Harry").setParameter(2, "Potter")
+				.setParameter(3, "Ron").setParameter(4, "Weasley")
+				.setParameter(5, "Severus").setParameter(6, "Snape").getResultList();
+		
+		//corremos la lista y la vez hacemos el recuento de puntos
+		for(HousePoints hp: li) {
+			puntosTotales = puntosTotales + hp.getPoints();
+		}
+		
+		//mostramos los puntos
+		System.out.println("Puntos quitados a H y P por SS " + puntosTotales);
+		
+	}
+	
+	/**
+	 * metodo para duplicar los puntos otorgados por SSnape a HPotter y RWeasley
+	 * @param sesion
+	 */
+	private static void duplicarPuntos(Session sesion) {
+		
+		Transaction tx = sesion.beginTransaction();
+		
+		String hqlInsert = "INSERT INTO HousePoints (points, personByGiver, personByReceiver) "
+				         + "SELECT hp.points, hp.personByGiver, hp.personByReceiver "
+				         + "FROM HousePoints as hp"
+				         + " where ((hp.personByReceiver.firstName = 'Harry' and hp.personByReceiver.lastName = 'Potter')"
+				         + " or (hp.personByReceiver.firstName = 'Ron' and hp.personByReceiver.lastName = 'Weasley'))"
+				         + " and (hp.personByGiver.firstName = 'Severus' and hp.personByGiver.lastName = 'Snape')";
+		
+		sesion.createQuery(hqlInsert).executeUpdate();
+		
+		tx.commit();
+		
+	}
+	
+	private static void verMatriculadosMugles(Session sesion) {
+		
+		//alamaceanamos en una variable de tipo la query con el count
+		Long count = (Long)sesion.createQuery("select count(*) from Person as p join p.courses_1 as cou where cou.name = 'Potions'").uniqueResult();
+		
+		//pasamos la consulta a un valor de tipo int y mostramos el resultado
+		Integer total = count.intValue();
+		System.out.println("Alumnos matriculados en Muggle Studies: " + total);
+	}
+
+}

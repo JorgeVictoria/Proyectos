@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23 dic 2021 0:22:00 by Hibernate Tools 5.5.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="starwars" dynamic-insert="false" dynamic-update="false" mutable="true" name="starwars.Deaths" optimistic-lock="none" polymorphism="implicit" select-before-update="false" table="deaths">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="starwars.Characters" embed-xml="true" fetch="select" insert="true" name="charactersByIdKiller" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="id_killer"/>
+        </many-to-one>
+        <many-to-one class="starwars.Characters" embed-xml="true" fetch="select" insert="true" name="charactersByIdCharacter" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="id_character"/>
+        </many-to-one>
+        <many-to-one class="starwars.Films" embed-xml="true" fetch="select" insert="true" name="films" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="id_film"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

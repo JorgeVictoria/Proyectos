@@ -1,0 +1,107 @@
+package hogwarts;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.ScrollableResults;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+public class Principal {
+
+	public static void main(String[] args) {
+			
+			//Inicializamos el entorno Hibernate
+			Configuration cfg = new Configuration().configure();
+			
+			//crear el ejemplar de session factory
+			SessionFactory sf = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+			
+			//abrir la sesion
+			Session sesion = sf.openSession();
+			
+			//llamada a ejercicios
+			ejercicio1(sesion);
+			ejercicio2(sesion);
+			ejercicio3(sesion);
+			ejercicio4(sesion);
+			
+			//ejercicio
+			
+			//cerrar la sesion
+			sf.close();
+
+		}
+		
+		
+
+		public static void ejercicio1(Session sesion) {
+			
+			System.out.println();
+			System.out.println("Ejercicio 1:");
+			System.out.println();
+			List<Person> dl = sesion.createQuery("from Person as pe where pe.lastName = 'Potter'").getResultList();
+			for(Person p: dl) System.out.println(p.getFirstName() + " " + p.getLastName() + " - " + p.getHouse().getName());
+			
+		}
+		
+		private static void ejercicio2(Session sesion) {
+			
+			System.out.println();
+			System.out.println("Ejercicio 2:");
+			System.out.println();
+			
+			ScrollableResults sr = sesion.createQuery("from Person p join p.courses_1 group by p.lastName").scroll();
+			while(sr.next()) {
+				Person p = (Person)sr.get(0);
+				System.out.println(p.getLastName() + ", " + p.getFirstName());
+			}
+			
+			Long count = (Long)sesion.createQuery("select count(distinct p.id) from Person p join p.courses_1").uniqueResult();
+			Integer total = count.intValue();
+			System.out.println("Numero total de estudiantes: " + total);
+		}
+		
+		private static void ejercicio3(Session sesion) {
+			
+			int puntosTotales = 0;
+			
+			System.out.println();
+			System.out.println("Ejercicio 3:");
+			System.out.println();
+			
+			List<HousePoints> li = sesion.createQuery("from HousePoints as hp where (hp.personByReceiver.firstName = ?1 and hp.personByReceiver.lastName = ?2) or (hp.personByReceiver.firstName = ?3 and hp.personByReceiver.lastName = ?4)  or (hp.personByReceiver.firstName = ?5 and hp.personByReceiver.lastName = ?6) order by hp.personByReceiver.firstName")
+					.setParameter(1, "Harry").setParameter(2, "Potter")
+					.setParameter(3, "Ron").setParameter(4, "Weasley")
+					.setParameter(5, "Hermione").setParameter(6, "Granger").getResultList();
+			for(HousePoints hp: li) {
+				System.out.println(hp.getPersonByGiver().getFirstName() + " -> "  + hp.getPoints() + " puntos para " 
+							+ hp.getPersonByReceiver().getFirstName() +  " " +  hp.getPersonByReceiver().getLastName()) ;
+				puntosTotales = puntosTotales + hp.getPoints();
+			}
+			
+			System.out.println("Total Puntos: " + puntosTotales);
+			
+		}
+		
+		private static void ejercicio4(Session sesion) {
+			
+			System.out.println();
+			System.out.println("Ejercicio 4.1:");
+			System.out.println();
+			
+			ScrollableResults sc = sesion.createQuery("from Person as p join p.courses_1 as co, Course as cou where co.name = 'Potions' and cou.name = 'Potions'").scroll();
+			while(sc.next()) {
+				Person alumno = (Person)sc.get(0);
+				Course modulo = (Course)sc.get(1);
+				Course profesor = (Course)sc.get(2);
+				System.out.printf("%s %s estudia %s con %s %s\n", alumno.getFirstName(),alumno.getLastName(), modulo.getName(), profesor.getPerson().getFirstName(), profesor.getPerson().getFirstName());
+				
+			}
+		
+	}
+
+}

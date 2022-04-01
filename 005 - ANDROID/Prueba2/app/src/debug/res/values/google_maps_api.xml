@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=F1:6F:F2:0A:49:A8:05:F3:0C:CD:18:2F:9B:32:39:C8:1B:9E:82:02%3Bcom.rucech.prueba2
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.rucech.prueba2
+
+    SHA-1 certificate fingerprint:
+    F1:6F:F2:0A:49:A8:05:F3:0C:CD:18:2F:9B:32:39:C8:1B:9E:82:02
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDQhe-mugq1eOkoeMq_aryG7gqFzAA5D6Q</string>
+</resources>

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"jovian.entradas","l":"App"},{"p":"jovian.entradas","l":"Entrada"},{"p":"jovian.entradas","l":"FinalController"},{"p":"jovian.entradas","l":"PrimaryController"},{"p":"jovian.entradas","l":"SecondaryController"}];updateSearchResults();

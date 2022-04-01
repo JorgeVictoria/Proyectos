@@ -1,0 +1,29 @@
+package principal;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Inicializamos el entorno Hibernate
+		Configuration cfg = new Configuration().configure();
+		
+		//crear el ejemplar de session factory
+		SessionFactory sf = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+		
+		//abrir la sesion
+		Session sesion = sf.openSession();
+		
+		//cerrar la sesion
+		sf.close();
+				
+		
+
+	}
+
+}

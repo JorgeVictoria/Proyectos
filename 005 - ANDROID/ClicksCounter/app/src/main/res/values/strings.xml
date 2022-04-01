@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Clicks Counter</string>
+    <string name="btnMessage">Click Me!</string>
+    <string name="tvMessage">You have clicked 0 times</string>
+</resources>

@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package tiposDatos;
+
+/**
+ * Representacion de los diferentes tipos de numeros
+ * @author jvand
+ * @since 13dic2021
+ * @version 1.0
+ *
+ */
+public class Numeros {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		System.out.println(String.valueOf(Byte.MIN_VALUE));
+
+	}
+
+}

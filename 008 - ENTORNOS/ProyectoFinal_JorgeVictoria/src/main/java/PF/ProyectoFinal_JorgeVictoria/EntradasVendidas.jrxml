@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EntradasVendidas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="89fb721e-0e26-40f3-83df-6518dd8b3e5b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="sala" class="java.lang.String"/>
+	<field name="pelicula" class="java.lang.String"/>
+	<field name="hora" class="java.lang.String"/>
+	<field name="fila" class="java.lang.Integer"/>
+	<field name="asiento" class="java.lang.Integer"/>
+	<field name="precio" class="java.lang.Double"/>
+	<variable name="recaudacion" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{precio}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="20" width="200" height="30" uuid="1eb1158a-d1ad-4f10-8e31-10645978ca52"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="20"/>
+				</textElement>
+				<text><![CDATA[TUENTRADA.COM]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="10" width="212" height="24" uuid="b969ce48-021b-4eba-949e-b05d285d6a6c"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="14"/>
+				</textElement>
+				<text><![CDATA[ENTRADAS VENDIDAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="60" height="24" uuid="5fba493a-6985-4957-978f-3db4019762a7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="16" width="100" height="30" uuid="ce488cc4-b842-4735-9ffe-96b65aa66647"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PELICULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="16" width="80" height="30" uuid="cbbb0d8a-f02f-492e-91eb-2685c6381f32"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="16" width="100" height="30" uuid="d4e95b20-f42d-4012-8b14-73bec9c8812d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FILA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="13" width="70" height="30" uuid="449ca6d0-ee52-42a6-8828-ca349e9411b6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASIENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="13" width="100" height="30" uuid="b1531250-285b-4e97-b678-96f671a0f1bc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRECIO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="60" height="20" uuid="22f3b5bd-4a46-4db7-9a37-6381470feb82"/>
+				<textFieldExpression><![CDATA[$F{sala}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="10" width="110" height="20" uuid="0e83af53-5188-4b16-8f94-9457116fa6e3"/>
+				<textFieldExpression><![CDATA[$F{pelicula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="10" width="80" height="20" uuid="6e4871ea-85c3-4d98-a0dc-a3de5320d49d"/>
+				<textFieldExpression><![CDATA[$F{hora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="10" width="90" height="20" uuid="46cd1876-48f1-4f63-b384-0083370a2a10"/>
+				<textFieldExpression><![CDATA[$F{fila}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="10" width="75" height="20" uuid="b9494787-6e1f-4d4b-a058-34c922d35be0"/>
+				<textFieldExpression><![CDATA[$F{asiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="10" width="100" height="20" uuid="e161a001-559b-48a3-aa21-44e56ecd5087"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="68" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="320" y="12" width="100" height="30" uuid="b1257f72-1190-47a6-a2b9-0033f05e7da3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="410" y="12" width="100" height="30" uuid="d04423c8-ee5e-45d3-bdbd-daa186673fdc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{recaudacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Ver mi Localización" />
+        <item
+            android:id="@+id/ocultar"
+            android:title="Ocultar mi Localización"
+            android:name="android:actionMenuTextColor">@color/purple_200</item>
+    </group>
+
+    <group
+        android:id="@+id/menu_middle"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/verRestaurantes"
+            android:title="Ver Restaurantes" />
+
+        <item
+            android:id="@+id/verApuestas"
+            android:title="Ver Casas de Juego" />
+
+        <item
+            android:id="@+id/ocultarto"
+            android:title="Ocultar todo" />
+
+    </group>
+
+
+    <item
+        android:id="@+id/nav_closedrawer"
+        android:title="Cerrar menú" />
+
+    <item
+        android:id="@+id/nav_outapp"
+        android:title="Salir App" />
+</menu>

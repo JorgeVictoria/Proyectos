@@ -1,0 +1,35 @@
+.AnchorPane		{-fx-background-color: white;
+				 -fx-border-color: orange;
+				 -fx-border-width: 20px;}
+				
+.Head			{-fx-font-size: 24pt;
+    			 -fx-font-family: "Comic Sans MS";
+    			 -fx-font-style: italic ;
+    			 -fx-font-weight: bold;
+   				 -fx-text-fill: orange;}
+   				 
+.Label			{-fx-font-size: 18pt;
+    			 -fx-font-family: "Comic Sans MS";
+    			 -fx-font-style: italic ;
+    			 -fx-font-weight: bold;
+   				 -fx-text-fill: orange;}
+   				 
+.TextField     	{-fx-font-size: 14pt;
+    			 -fx-font-family: "Comic Sans MS";
+    			 -fx-font-style: italic ;
+    			 -fx-font-weight: bold;
+   				 -fx-text-fill: orange;}
+   				 
+.Button			{-fx-background-color: orange;
+	 			 -fx-text-fill: white;
+	 			 -fx-font-size: 14pt;
+	 			 -fx-font-family: "Comic Sans MS";
+    			 -fx-font-style: italic ;
+    			 -fx-font-weight: bold;}
+    			 
+.Warning     	{-fx-font-size: 12pt;
+    			 -fx-font-family: "Comic Sans MS";
+    			 -fx-font-style: italic ;
+    			 -fx-font-weight: bold;
+   				 -fx-text-fill: orange;
+   				 -fx-alignment: center;}

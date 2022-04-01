@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="260.0" style="-fx-background-color: plum;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="PLATAFORMAS VOD">
+         <VBox.margin>
+            <Insets left="80.0" top="40.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Porcentaje de votos">
+         <VBox.margin>
+            <Insets left="80.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="27.0" prefWidth="260.0">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" text="Neflix">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" text="30%">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="45.0" prefWidth="260.0">
+         <children>
+            <Label text="HBO">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="10%">
+               <HBox.margin>
+                  <Insets left="75.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="47.0" prefWidth="260.0">
+         <children>
+            <Label text="Amazon Prime">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="5%">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="86.0" prefWidth="260.0">
+         <children>
+            <Label text="Disney+">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="50%">
+               <HBox.margin>
+                  <Insets left="55.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Salir">
+         <VBox.margin>
+            <Insets left="100.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

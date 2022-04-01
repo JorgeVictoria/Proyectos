@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">P3Navigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="texto1">Desarrollo de sofware y paginas web. Administracion de redes y sistemas informaticos. Soluciones
+     informaticas para empresas y particulares.</string>
+    <string name="texto2">Deje que hagamos realidad sus ideas. Trabajo y constancia es nuestro lema.</string>
+    <string name="texto3">Somos un futuro proyecto de servicios informaticos que queremos abrirnos paso en el mundo
+    del desarrollo de software en general, aplicaciones moviles y desarrollo y maquetacion de paginas web.</string>
+    <string name="texto4">Las distintas tecnologias avanzan a un ritmo frenetico y nos encontramos en un punto de
+    constantes cambios, que obliga a grandes y pequeñas empresas, y tambien particulares, a tener que adaptarse para
+     poder producir u ofrecer sus servicios de manera exitosa.</string>
+    <string name="texto5">Nuestra intencion es ser una opcion mas para facilitar esa adaptacion a las nuevas tecnologias.</string>
+    <string name="texto6">Tecnico Superior en: \n -Administracion de Sistemas Informaticos \n -Desarrollo de Aplicaciones Multiplataforma(en curso) </string>
+    <string name="texto7">Actualmente Reservista de Especial Disponibildad del MDEF tras 25 años en el Ejercito, mi experiencia laboral consiste en
+    haber estado destinado durante 17 años en el Area de Explotacion de Redes del Centro de Comunicaciones T-1302, en Betera, perteneciente al Regimiento de
+    Transmisiones 22, realizando funciones de helpdesk y ayuda al usuario asi como la administracion de sistemas informatico, llevando a cabo tareas relacionadas
+    con windows server(dominio,active directory, dhcp,...), buzones de correo(exchange), administracion de recursos(cuotas de espacio, backups, impresoras), gestion y configuracion de
+        electronica de red(switches, routers) ademas de otras labores como mantenimiento de hardware, asesoramiento, gestion de actualizaciones de Sistemas Operativos etc</string>
+   <string name="texto8">Actualmente estoy iniciando mi carrera en el mundo del desarrollo, en busca de nuevas oportunidades y alternativas, ademas que
+   siempre he tenido curiosidad por aprender a programar y poder crear programas o aplicaciones que se adapten a mis necesidades.</string>
+    <string name="texto11">Desde sencillas aplicaciones basadas de consola hasta programas de propsosito general o personalizados, basados en el lenguaje de programacion Java.</string>
+    <string name="texto12">Diseño y gestion de BBDD. Desarrollo de aplicaciones basadas en BBDD en conjuncion con el lenguaje de Programacion JAVA.</string>
+    <string name="texto13">Creación y mantenimiento de paginas web.</string>
+    <string name="texto14">Creacion y desarrollo de aplicaciones para dispositivos moviles basadas en Android Studio</string>
+    <string name="texto15">Administracion y gestion de sistemas informaticos basados en Microsoft Windows, version escritorio o Server, asi como
+     administracion de dispositivos de electronica de red(switches, routers, cableado).</string>
+    <string name="linkedinurl"><a href="http://link1/terms">Enlace a pagina personal de linkedin.</a> </string>
+</resources>

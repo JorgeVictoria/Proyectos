@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Activities</string>
+    <string name="tvSaludo">Main Activity</string>
+    <string name="go">go</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="name">Name</string>
+    <string name="back">Back</string>
+</resources>

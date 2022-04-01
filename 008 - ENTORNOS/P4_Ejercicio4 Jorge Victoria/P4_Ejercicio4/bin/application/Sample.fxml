@@ -1,0 +1,50 @@
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?language javascript?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <Label fx:id="lbLogin"  layoutX="60.0" layoutY="64.0" text="Login" />
+      <Label fx:id="lbPassword" layoutX="50.0" layoutY="123.0" text="Password" />
+      <PasswordField fx:id="pfPassword" layoutX="116.0" layoutY="119.0" />
+      <TextField fx:id="tfLogin" layoutX="116.0" layoutY="60.0" />
+      <Button fx:id="btnAceptar" layoutX="124.0" layoutY="188.0" mnemonicParsing="false" text="Button" onAction="#comprobarVacio"/>
+      <fx:script>
+      	
+      	function checkItem() {
+      		idioma = cbIdioma.getValue();
+      		if(idioma == "Valenciá") {
+      				lbLogin.setText("Usuari");
+      				lbPassword.setText("Contrasenya");
+      		}
+      		else if (idioma == "English") {
+      				lbLogin.setText("UserName");
+      				lbPassword.setText("Password");
+      		} else {
+      				lbLogin.setText("Usuario");
+      				lbPassword.setText("Contraseña");
+      		}
+      	}
+      	
+      	
+      </fx:script>
+      <ComboBox fx:id="cbIdioma" layoutX="90.0" layoutY="251.0" prefWidth="150.0" onAction="checkItem()">
+      		<items>
+        		<FXCollections fx:factory="observableArrayList">
+		            <String fx:value="Castellano" />
+		            <String fx:value="Valenciá" />
+		            <String fx:value="English" />
+       			 </FXCollections>
+    		</items>
+       
+      </ComboBox>
+      <Label fx:id="labWarning" layoutX="136.0" layoutY="332.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,129 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SomosFragment">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="247dp"
+            android:src="@drawable/computer"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvSomos1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSomos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSomos3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto5"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSomos5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="Equipo"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/ivFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="247dp"
+            android:src="@drawable/foto"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvSomos4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="Jorge Victoria Andreu"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSomos6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto6"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tvSomos7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto7"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSomos8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
+            android:fontFamily="@font/cherry_cream_soda"
+            android:text="@string/texto8"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

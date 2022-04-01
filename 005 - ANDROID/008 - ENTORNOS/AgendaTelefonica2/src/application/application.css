@@ -1,0 +1,35 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.list-cell {-fx-font:8pt "Comic Sans MS Bold Italic" }
+.AnchorPane {-fx-background-color: white;
+	         -fx-border-color: orange;
+	         -fx-border-width : 10px;}
+
+.Label.header {-fx-font-size: 24pt;
+    			-fx-font-family: "Comic Sans MS";
+    			-fx-font-style: italic ;
+    			-fx-font-weight: bold;
+   				 -fx-text-fill: orange;}
+   				 
+.Label 			{-fx-font-size: 18pt;
+    			-fx-font-family: "Comic Sans MS";
+    			-fx-font-style: italic ;
+    			-fx-font-weight: bold;
+   				 -fx-text-fill: orange;}
+   				 
+.Button			{-fx-background-color: orange;
+	 			-fx-text-fill: white;
+	 			-fx-font-size: 14pt;
+	 			-fx-font-family: "Comic Sans MS";
+    			-fx-font-style: italic ;
+    			-fx-font-weight: bold;}
+	 			
+.TextField		{-fx-font-size: 14pt;
+    			-fx-font-family: "Comic Sans MS";
+    			-fx-font-style: italic ;
+    			-fx-font-weight: bold;
+   				 -fx-text-fill: orange;}
+   				 
+.MenuBar		{-fx-background-color: orange;}
+
+
+

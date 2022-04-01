@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_graph"
+    app:startDestination="@id/bottom1Fragment">
+
+    <fragment
+        android:id="@+id/bottom1Fragment"
+        android:name="com.jovian.navgitationwithmenu.bottom1Fragment"
+        android:label="fragment_bottom1"
+        tools:layout="@layout/fragment_bottom1" />
+    <fragment
+        android:id="@+id/bottom2Fragment"
+        android:name="com.jovian.navgitationwithmenu.bottom2Fragment"
+        android:label="fragment_bottom2"
+        tools:layout="@layout/fragment_bottom2" />
+    <fragment
+        android:id="@+id/bottom3Fragment"
+        android:name="com.jovian.navgitationwithmenu.bottom3Fragment"
+        android:label="fragment_bottom3"
+        tools:layout="@layout/fragment_bottom3" />
+</navigation>

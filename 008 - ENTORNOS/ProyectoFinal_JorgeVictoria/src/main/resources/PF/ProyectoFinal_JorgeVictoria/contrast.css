@@ -1,0 +1,32 @@
+.AnchorPane { -fx-background-color: white;
+			  -fx-border-color: black;
+	          -fx-border-width : 10px; }
+
+
+.Banner  { -fx-alignment:center;
+		   -fx-font-family: "Comic Sans MS";
+		   -fx-font-size: 40px;
+		   -fx-text-fill: black; }
+
+		   				      
+.labelEntrada { -fx-font-family: "Comic Sans MS";
+		        -fx-font-size: 22px;
+		        -fx-text-fill: black; }
+		   				   
+.ComboBox { -fx-alignment:center-left ;
+			-fx-font-family: "Comic Sans MS";
+			-fx-font-size: 16px;
+		   	-fx-text-fill: Pink;
+		    -fx-background-color: white;}
+		    
+.entrada { -fx-alignment:center ;
+			-fx-font-family: "Comic Sans MS";
+			-fx-font-size: 28px;
+		   	-fx-text-fill: black;
+		   	-fx-font-weight: bold;}
+
+.btnPagar { -fx-alignment:center ;
+			-fx-font-family: "Comic Sans MS";
+            -fx-font-size: 20px;
+            -fx-text-fill: white;
+            -fx-background-color: black;}

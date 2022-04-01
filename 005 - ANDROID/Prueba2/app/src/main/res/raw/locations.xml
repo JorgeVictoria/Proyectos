@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <locations>
+    <location>
+        <title>Restautante China Town</title>
+        <fragment>https://www.restaurantechinatown.es/menurestaurante/</fragment>
+        <tag>restaurant</tag>
+        <latitude>39.4537565</latitude>
+        <longitude>-0.4571978</longitude>
+    </location>
+    <location>
+        <title>Salvador Martínez Colquell</title>
+        <fragment>https://cumaps.net/en/ES/salvador-martinez-colquell-p517660</fragment>
+        <tag>restaurant</tag>
+        <latitude>39.4539095</latitude>
+        <longitude>-0.458045</longitude>
+    </location>
+    <location>
+        <title>Bar la tapa</title>
+        <fragment>https://www.tripadvisor.es/Restaurant_Review-g3555115-d9789711-Reviews-Restaurante_Bar_La_Tapa-Ayora_Province_of_Valencia_Valencian_Country.html</fragment>
+        <tag>restaurant</tag>
+        <latitude>39.4557284</latitude>
+        <longitude>-0.4564617</longitude>
+    </location>
+    <location>
+        <title>Clos del Gos</title>
+        <fragment>https://www.tripadvisor.es/Restaurant_Review-g1079491-d15598016-Reviews-Clos_Del_Gos-Alacuas_Province_of_Valencia_Valencian_Country.html</fragment>
+        <tag>restaurant</tag>
+        <latitude>39.4566232</latitude>
+        <longitude>-0.4545392</longitude>
+    </location>
+    <location>
+        <title>Bar Bremen - Aldaia</title>
+        <fragment>https://www.barbremen.com/</fragment>
+        <tag>restaurant</tag>
+        <latitude>39.4701207</latitude>
+        <longitude>-0.4530027</longitude>
+    </location>
+    <location>
+        <title>Sportium Apuestas Corner en Playland Aldaia</title>
+        <fragment>900447744</fragment>
+        <tag>apostasy</tag>
+        <latitude>39.4676021</latitude>
+        <longitude>-0.4448505</longitude>
+    </location>
+    <location>
+        <title>Salón de Juegos RePlay San Isidro</title>
+        <fragment>900818202</fragment>
+        <tag>apostasy</tag>
+        <latitude>39.4522871</latitude>
+        <longitude>-0.4045497</longitude>
+    </location>
+    <location>
+        <title>Luckia Slots Apuestas Barón</title>
+        <fragment>607154006</fragment>
+        <tag>apostasy</tag>
+        <latitude>39.4714071</latitude>
+        <longitude>-0.3817137</longitude>
+    </location>
+    <location>
+        <title>Sportium Apuestas en Bar La Luz</title>
+        <fragment>900447744</fragment>
+        <tag>apostasy</tag>
+        <latitude>39.4672216</latitude>
+        <longitude>-0.4165054</longitude>
+    </location>
+    <location>
+        <title>Sportium Apuestas en Bar Amores</title>
+        <fragment>900447744</fragment>
+        <tag>apostasy</tag>
+        <latitude>39.4715942</latitude>
+        <longitude>-0.4567381</longitude>
+    </location>
+</locations>

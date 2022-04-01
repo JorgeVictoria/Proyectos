@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">IntentActivities</string>
+    <string name="btnText">Go to Activity</string>
+</resources>

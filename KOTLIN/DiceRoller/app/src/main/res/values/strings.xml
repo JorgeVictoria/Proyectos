@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dice Roller</string>
+    <string name="greetings">Hello World!</string>
+    <string name="roll_label">Roll</string>
+    <string name="number">Click the button to Roll dice</string>
+    <string name="count_up">Count Up</string>
+    <string name="reset">Reset</string>
+</resources>
